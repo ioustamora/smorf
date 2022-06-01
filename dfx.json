@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "smorf": {
+      "main": "src/smorf/main.mo",
+      "type": "motoko"
+    },
+    "smorf_assets": {
+      "dependencies": [
+        "smorf"
+      ],
+      "frontend": {
+        "entrypoint": "src/smorf_assets/src/index.html"
+      },
+      "source": [
+        "src/smorf_assets/assets",
+        "dist/smorf_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.10.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
