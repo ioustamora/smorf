@@ -6,17 +6,102 @@
     <title>smorf</title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
-    <link type="text/css" rel="stylesheet" href="main.css" />
+    <link href="bs/css/bootstrap.min.css" rel="stylesheet" >
+    <script src="bs/js/bootstrap.bundle.min.js"></script>
+    <!-- link type="text/css" rel="stylesheet" href="main.css" / -->
   </head>
   <body>
-    <main>
-      <img src="logo.png" alt="DFINITY logo" />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
+    <div class="container" id="app">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">smorf</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor03">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                   about
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href data-bs-toggle="modal" data-bs-target="#modalFeatures">
+                  features
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">create new</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-md-auto">
+              <li class="nav-item">
+                <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/ioustamora/smorf"><i class="fa fa-github"></i> github</a>
+              </li>
+              <li class="nav-item">
+                <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/ioustamora"><i class="fa fa-twitter"></i> twitter</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-outline-primary" href>log in</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <img style="max-height: 300px;" src="logo.png" alt="DFINITY logo" />
+      <div>
+        <div class="form-group">
+          <label class="form-label mt-4">Enter name:</label>
+          <div class="form-group">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2" v-model="input.message">
+              <button class="btn btn-primary" type="button" id="button-addon2" @click="greet" :disabled="isLoading">Click me!</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>message: {{ message }}</div>
+      <div>input.message: {{ input.message }}</div>
+    </div> 
+    <!-- About Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">about smorf</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h2>what is smorf?</h2>
+            <p>smorf is a simple dao factory for smo. the smorf main idea is to make a simple to use tool to create and manage simple dao. anybody as an admin of new smo will be able to create setup and manage simple blockchain backed dao. smorf initialy targets small comunities up to 1000 users.</p>
+            <h2>what is smo?</h2>
+            <p>smo is a self managed organisations. any kind of professionals can start the self driven comunity with common budget and voting driven desigion making</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Features Modal -->
+    <div class="modal fade" id="modalFeatures" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">smorf features</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h2>simple dao crud</h2>
+            <p>...</p>
+            <h2>budget management</h2>
+            <p>...</p> 
+            <h2>proposal voting with comments</h2>
+            <p>...</p> 
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

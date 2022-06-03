@@ -1,19 +1,35 @@
 import { smorf } from "../../declarations/smorf";
+import { createApp } from "../assets/vue/vue.esm-browser.prod";
 
-document.querySelector("form").addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const button = e.target.querySelector("button");
+//import { createApp } from 'vue'
 
-  const name = document.getElementById("name").value.toString();
+  createApp({
+    data() {
+      return {
+        message: 'Hello!',
+        input: {
+          message: "",
+        },
+        isLoading: false,
+      }
+    },
+    methods: {
+      greet() {
+        this.isLoading = true;
+        smorf.greet(this.input.message)
+        .then(greeting => {
+          this.message = greeting;
+          this.input.message = "";
+          this.isLoading = false;
+        })
+        .catch(err => {
+          console.log(err);
+          this.isLoading = false;
+        });
+      },
+    },
+    mounted() {
+      console.log(`initial message is ${this.message}.`)
+    },
+  }).mount('#app');
 
-  button.setAttribute("disabled", true);
-
-  // Interact with foo actor, calling the greet method
-  const greeting = await smorf.greet(name);
-
-  button.removeAttribute("disabled");
-
-  document.getElementById("greeting").innerText = greeting;
-
-  return false;
-});
