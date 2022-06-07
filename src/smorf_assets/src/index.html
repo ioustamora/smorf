@@ -12,47 +12,98 @@
   </head>
   <body>
     <div class="container" id="app">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand">smorf</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
       
-          <div class="collapse navbar-collapse" id="navbarColor03">
-            <ul class="navbar-nav me-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                   about
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href data-bs-toggle="modal" data-bs-target="#modalFeatures">
-                  features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">pricing</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">create new</a>
-              </li>
-            </ul>
-            <ul class="navbar-nav ms-md-auto">
-              <li class="nav-item">
-                <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/ioustamora/smorf"><i class="fa fa-github"></i> github</a>
-              </li>
-              <li class="nav-item">
-                <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/ioustamora"><i class="fa fa-twitter"></i> twitter</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-outline-primary" href>log in</a>
-              </li>
-            </ul>
+      <div class="row" style="margin-bottom:10px;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+          <div class="container-fluid">
+            <a class="navbar-brand">smorf</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarColor03">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    about smorf
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href data-bs-toggle="modal" data-bs-target="#modalFeatures">
+                    key features
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href data-bs-toggle="modal" data-bs-target="#modalPrices">pricing & fees</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href data-bs-toggle="modal" data-bs-target="#modalCreate">create new dao</a>
+                </li>
+              </ul>
+              <ul class="navbar-nav ms-md-auto">
+                <li class="nav-item">
+                  <a target="_blank" rel="noopener" class="nav-link" href="https://github.com/ioustamora/smorf"><i class="fa fa-github"></i> github</a>
+                </li>
+                <li class="nav-item">
+                  <a target="_blank" rel="noopener" class="nav-link" href="https://twitter.com/ioustamora"><i class="fa fa-twitter"></i> twitter</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-light" href>log in</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      
+
+      <div class="row row-cols-3">
+        <div class="col" style="margin-bottom: 10px;">
+          <div class="card border-light">
+            <div class="card-header text-white bg-secondary">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Light card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
           </div>
         </div>
-      </nav>
-      <img style="max-height: 300px;" src="logo.png" alt="DFINITY logo" />
+        <div class="col" style="margin-bottom: 10px;">
+          <div class="card border-light">
+            <div class="card-header text-white bg-secondary">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Light card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+      </div>
+      <div class="col" style="margin-bottom: 10px;">
+          <div class="card border-light">
+            <div class="card-header text-white bg-secondary">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Light card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-bottom: 10px;">
+          <div class="card border-light">
+            <div class="card-header text-white bg-secondary">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Light card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="margin-bottom: 10px;">
+          <div class="card border-light">
+            <div class="card-header text-white bg-secondary">Header</div>
+            <div class="card-body">
+              <h4 class="card-title">Light card title</h4>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div>
         <div class="form-group">
           <label class="form-label mt-4">Enter name:</label>
@@ -76,9 +127,9 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <h2>what is smorf?</h2>
+            <h3>what is smorf?</h3>
             <p>smorf is a simple dao factory for smo. the smorf main idea is to make a simple to use tool to create and manage simple dao. anybody as an admin of new smo will be able to create setup and manage simple blockchain backed dao. smorf initialy targets small comunities up to 1000 users.</p>
-            <h2>what is smo?</h2>
+            <h3>what is smo?</h3>
             <p>smo is a self managed organisations. any kind of professionals can start the self driven comunity with common budget and voting driven desigion making</p> 
           </div>
         </div>
@@ -93,12 +144,49 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <h2>simple dao crud</h2>
+            <h3>simple dao crud</h3>
             <p>...</p>
-            <h2>budget management</h2>
+            <h3>budget management</h3>
             <p>...</p> 
-            <h2>proposal voting with comments</h2>
+            <h3>proposal voting with comments</h3>
             <p>...</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Prices Modal -->
+    <div class="modal fade" id="modalPrices" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">smorf pricing & fees</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h3>...</h3>
+            <p>...</p> 
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Create Modal -->
+    <div class="modal fade" id="modalCreate" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">create new dao/smo</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="exampleInputEmail1" class="form-label mt-4">name your dao/smo</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="enter the name of new dao/smo">
+              <small id="emailHelp" class="form-text text-muted">please try to choose unique name</small>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-lg btn-success" type="button" @click="greet" :disabled="isLoading">create new dao</button>
+            </div>
           </div>
         </div>
       </div>

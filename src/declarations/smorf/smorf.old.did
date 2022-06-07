@@ -1,3 +1,10 @@
 service : {
+  create: (text) -> (text);
+  get_canister_name: () -> (text);
+  get_cycles_balance: () -> (nat);
+  get_my_cycles_balance: () -> (nat);
+  get_state_size: () -> (nat);
   greet: (text) -> (text);
+  test: () -> (text);
+  whoami: () -> (text);
 }
