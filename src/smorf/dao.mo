@@ -105,4 +105,8 @@ actor class Dao(name: Text, admin: Principal, created: Time.Time) {
     public func get_cycles_balance() : async Nat {
         return Cycles.balance();
     };
+
+    public shared({ caller }) func whoami(): async Text {
+        return Principal.toText(caller);
+    };
 };

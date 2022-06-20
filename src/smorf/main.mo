@@ -11,13 +11,17 @@ import Iter "mo:base/Iter";
 import Dao "./dao";
 
 actor smorf {
-  private var admins_daos = Map.HashMap<Principal, Principal>(10, Principal.equal, Principal.hash);
+  private var dao_by_admin = Map.HashMap<Principal, List.List<Principal>>(10, Principal.equal, Principal.hash);
+
+  public func greet(name : Text) :  {
+    return "Hello, " # name # "!";
+  };
 
   public func greet(name : Text) : async Text {
     return "Hello, " # name # "!";
   };
 
-  ///dynamically create dao canister 
+  ///dynamically create dao canisterили
   public shared ({ caller }) func create(name: Text) : async Text {
     assert not Principal.isAnonymous(caller);
 
@@ -72,10 +76,6 @@ actor smorf {
   // Useful for debugging. 
   public shared({ caller }) func whoami(): async Text {
     return Principal.toText(caller);
-  };
-
-  public shared ({ caller }) func get_my_cycles_balance(): async Nat {
-    return Cycles.balance();
   };
 
   ///create list and add to it
